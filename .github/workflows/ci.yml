@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.8"   # the Python that ROS Noetic ships
+      - run: pip install pytest
+      - name: Syntax-check every node
+        run: python -m py_compile scripts/*.py
+      - name: Run the decision-logic tests (ROS is stubbed)
+        run: pytest -q
