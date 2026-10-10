@@ -1,0 +1,10 @@
+# Goal
+string room
+---
+# Result
+string[] objects
+string[] rooms
+---
+# Feedback
+string object
+string room

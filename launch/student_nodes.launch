@@ -1,0 +1,4 @@
+<launch>
+    <node pkg="second_coursework" type="yolo_detector.py" name="yolo_detector" output="screen" />
+    <node pkg="second_coursework" type="tidy_server.py" name="tidy_server" output="screen" />
+</launch>
