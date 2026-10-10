@@ -1,5 +1,7 @@
 # Tidy-Up Robot
 
+[![CI](https://github.com/madmaxfv0/tidy-up-robot/actions/workflows/ci.yml/badge.svg)](https://github.com/madmaxfv0/tidy-up-robot/actions/workflows/ci.yml)
+
 A ROS package that makes a TurtleBot3 tidy a room. Given a room name, the robot drives there, looks around with a YOLOv4 object detector, and carries anything that does not belong to a room where it does, announcing what it is doing when it sees a person. The behaviour is a SMACH state machine running inside an actionlib server.
 
 ## Problem and purpose
